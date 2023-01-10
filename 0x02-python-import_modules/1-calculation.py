@@ -1,23 +1,13 @@
 #!/usr/bin/python3
-from sys import argv
+from calculator_1 import add, mul, div, sub
+def calculator():
+     a = 10
+     b = 5
+     print("{} + {} = {}".format(a, b, add(a, b)))
+     print("{} - {} = {}".format(a, b, sub(a, b)))
+     print("{} * {} = {}".format(a, b, mul(a, b)))
+     print("{} / {} = {}".format(a, b, div(a, b)))
 
+     if __name__ == "__main__":
+         calculator()
 
-def print_sys_arguments():
-    """prints the number of and the list of its arguments
-    Args:
-        No arguments
-    Returns:
-        The return value. Nothing
-    """
-    ac = len(argv)
-    print("{:d} {:s}{:s}{:s}".format(
-        ac - 1,
-        "argument" if ac <= 2 else "arguments",
-        "s" if ac <= 1 else "",
-        "." if ac == 1 else ":"))
-    for index, args in enumerate(argv):
-        if index == 0:
-            continue
-        print("{:d}: {:s}".format(index, args))
-        if __name__ == "__main__":
-            print_sys_arguments()
