@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 number = 00
 for number in range(100):
-    print(number)
-    print(",")
+    if number == 99:
+        print("{}".format(number))
+        continue
+    print("{:02}".format(number), end=',')
