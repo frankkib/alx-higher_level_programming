@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-if _name_ == "_main_":
 
-    from add_0 import add
+from add_0 import add
 
-    def print_addition():
-        a = 1
-        b = 2
+def print_addition():
+    a = 1
+    b = 2
 
-        print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    return (a + b)
