@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""class defination"""
+
 class Square ():
-    """class defination"""
+
+    """class representation"""
 
     def __init__(self, size):
 
