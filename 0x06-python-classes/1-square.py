@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-class Square:
+class Square ():
     """class defination"""
 
-    def _init_(self, size):
+    def __init__(self, size):
 
         """class initialization
         Args:
