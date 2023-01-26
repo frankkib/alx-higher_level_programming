@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """class defination"""
+
+
 class Square:
     """"defines square attributes"""
     def __init__(self, size):
