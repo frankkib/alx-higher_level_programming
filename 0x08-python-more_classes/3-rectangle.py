@@ -55,15 +55,14 @@ class Rectangle:
     def __str__(self):
         """prints a string rectangle"""
         rct = ""
-        rect_wid = self.__width
-        rect_heig = self.__height
-        if rect_wid == 0 or rect_heig == 0:
+        wid = self.__width
+        heig = self.__height
+        if wid == 0 or heig == 0:
             return rct
         else:
-            for height in range(rect_heig):
-                for width in range(rect_wid):
+            for height in range(heig):
+                for width in range(wid):
                     rct += "#"
-                    if ((width + 1) == (rect_wid)) and ((height + 1) != \
-                    (rect_heig)):
+                    if ((width + 1) == (wid)) and ((height + 1) != (heig)):
                         rct += "\n"
             return rct
