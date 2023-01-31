@@ -63,7 +63,7 @@ class Rectangle:
             for height in range(rect_heig):
                 for width in range(rect_wid):
                     rct += "#"
-                    if (width + 1) == (rect_wid) and ((height + 1) !=
-                    (rect_heig)):
+                    if (width + 1) == (rect_wid) and
+                    ((height + 1) != (rect_heig)):
                         rct += "\n"
             return rct
