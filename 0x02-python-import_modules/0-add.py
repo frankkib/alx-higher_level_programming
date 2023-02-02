@@ -7,4 +7,3 @@ def print_addition():
     b = 2
 
     print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-    return (a + b)
