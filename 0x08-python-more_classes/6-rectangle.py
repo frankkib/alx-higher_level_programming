@@ -80,4 +80,4 @@ class Rectangle:
         """deletes the the rectangle"""
         self.number_of_instances
         type(self).number_of_instances -= 1
-        print("Bye rectangele...")
+        print("Bye rectangle...")
