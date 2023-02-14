@@ -3,7 +3,7 @@
 import json
 
 
-class Base:
+class Base():
     __nb_objects = 0
 
     """class intialization"""
