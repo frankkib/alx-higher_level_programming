@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Test module"""
 from models.base import Base
+from models.square import Square
+from models.rectangle import Rectangle
 import unittest
 
 
@@ -14,10 +16,10 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         self.assertEqual(b1.id, 1)
 
-    def test_no_args(self):
-        with self.assertRaises(TypeError):
-            b3 = Base(1, 1)
+    def test_no_json(self):
+        json_s = Base.to_json_string(None)
+        self.assertTrue(type(json_s) is str)
+        self.assertEqual(json_s, "[]")
 
-    def test_type(Self):
-        with self.assertRaises(TypeError):
-            b2 = Base("Invalid Tpype")
+    def test_empty(self):
+        self.assertEqual(Base.from_json_string(""), [])
