@@ -7,8 +7,8 @@ class Base():
     """class Base defination"""
     __nb_objects = 0
 
-    """class intialization"""
     def __init__(self, id=None):
+        """class intialization"""
         self.id = id
         if id is not None:
             self.id = id
@@ -25,6 +25,7 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """saves to a file"""
         filename = cls.__name__ + ".json"
         obj_dict = []
 
@@ -35,6 +36,7 @@ class Base():
                     f.write(cls.to_json_string(obj_dict))
 
     def from_json_string(json_string):
+        """changes from json to astring """
         if json_string is None or json_string == "":
             return []
         else:
