@@ -4,6 +4,7 @@ import json
 
 
 class Base():
+    """class Base defination"""
     __nb_objects = 0
 
     """class intialization"""
