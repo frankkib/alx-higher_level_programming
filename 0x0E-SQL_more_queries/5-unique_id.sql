@@ -1,2 +1,5 @@
---Ascript that creates the table unique_id on your MySQL server.
-CREATE TABLE IF NOT EXISTS unique_id(id NOT NULL UNIQUE INT DEFAULT 1, name VARCHAR(256));
+-- Ascript that creates the table unique_id on your MySQL server.
+CREATE TABLE IF NOT EXISTS unique_id (
+	id INT NOT NULL  DEFAULT 1,
+       UNIQUE KEY (id),	
+	name VARCHAR(256));
