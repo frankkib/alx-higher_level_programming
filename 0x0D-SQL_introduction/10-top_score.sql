@@ -1,2 +1,3 @@
---A  script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
+-- A script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
 SELECT score, name FROM second_table ORDER BY score DESC;
