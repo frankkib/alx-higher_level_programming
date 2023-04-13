@@ -16,13 +16,9 @@ module.exports = class Rectangle {
 
     let rect = '';
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        rect += 'X';
+	    console.log('X'.repeat(this.width));
       }
-      rect += '\n';
     }
-    console.log(rect);
-  }
 
   rotate () {
     const temp = this.width;
