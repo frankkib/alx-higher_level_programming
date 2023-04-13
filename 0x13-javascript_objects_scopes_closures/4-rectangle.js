@@ -13,12 +13,10 @@ module.exports = class Rectangle {
     if (!this.width || !this.height) {
       return;
     }
-
-    let rect = '';
     for (let i = 0; i < this.height; i++) {
 	    console.log('X'.repeat(this.width));
-      }
     }
+  }
 
   rotate () {
     const temp = this.width;
