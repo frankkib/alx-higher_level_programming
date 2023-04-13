@@ -3,7 +3,7 @@
 module.exports = class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
-      return Object.create(null);
+	    return Object.create(null);
     }
     this.width = w;
     this.height = h;
@@ -16,12 +16,7 @@ module.exports = class Rectangle {
 
     let rect = '';
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        rect += 'X';
+	console.log('X'.repeat(this.width));
       }
-      rect += '\n';
     }
-
-    console.log(rect);
-  }
-};
+  };
