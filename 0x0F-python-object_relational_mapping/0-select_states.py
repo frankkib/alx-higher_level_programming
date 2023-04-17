@@ -4,6 +4,7 @@ import sys
 """a script for printing all states in the database"""
 
 if __name__ == '__main__':
+    """connecting to the database"""
 
 
     db = MySQLdb.connect(
