@@ -1,4 +1,4 @@
-#!/usr/bin/pytthon3
+#!/usr/bin/python3
 """A script that takes argument and displays the states"""
 import MySQLdb
 import sys
