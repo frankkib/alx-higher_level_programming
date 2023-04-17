@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import MySQLdb
 import sys
 """a script for printing all states in the database"""
