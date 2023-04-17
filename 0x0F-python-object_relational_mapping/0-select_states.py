@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""a script for printing all states in the database"""
+
 import MySQLdb
 import sys
-"""a script for printing all states in the database"""
 
 def list():
 
