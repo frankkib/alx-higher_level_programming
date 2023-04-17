@@ -15,15 +15,16 @@ def list():
     db = MySQLdb.connect(
             host='localhost', port=3306, user=sys.argv[1],
             passwd=sys.argv[2], db=sys.argv[3])
-
+    """creating cursor object"""
     cursor = db.cursor()
-
+    """excute all sql commands"""
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
-
+    """fect all the states"""
     states = cursor.fetchall()
 
     for state in states:
         print(state)
+        """close the cursor and the databse connection"""
     cursor.close()
     db.close()
 
