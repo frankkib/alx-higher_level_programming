@@ -3,9 +3,9 @@ import MySQLdb
 import sys
 """a script for printing all states in the database"""
 
-if __name__ == '__main__':
-    """connecting to the database"""
+def list():
 
+    """connecting to the database"""
 
     db = MySQLdb.connect(
             host='localhost', port=3306, user=sys.argv[1],
@@ -21,3 +21,6 @@ if __name__ == '__main__':
         print(state)
     cursor.close()
     db.close()
+
+if __name__ = "__main__":
+    list()
