@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def list():
 
     """connecting to the database"""
@@ -22,6 +23,7 @@ def list():
         print(state)
     cursor.close()
     db.close()
+
 
 if __name__ = "__main__":
     list()
