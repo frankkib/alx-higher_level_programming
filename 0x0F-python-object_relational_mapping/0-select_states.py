@@ -1,27 +1,23 @@
 #!/usr/bin/python3
-"""
-a script for printing all states in the database
-hbtn_0e_0_usa
-"""
+"""A script that filters the database"""
 
 import MySQLdb
 import sys
-if __name__ = "__main__":
+
+if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
 
     db = MySQLdb.connect(
-            host='localhost', port=3306, user=username,
+            host="localhost", port=3306, user=username,
             passwd=password, db=db_name)
 
-    cursor = db.cursor()
+    cur = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-    states = cursor.fetchall()
+    for row in cur.fetchall():
+        print(row)
 
-    for state in states:
-        print(state)
-    cursor.close()
     db.close()
