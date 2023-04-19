@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-"""module that contains class defination"""
+"""Module that contains class defination"""
 
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 # Create an instance of the declarative base class
 Base = declarative_base()
@@ -11,7 +11,7 @@ Base = declarative_base()
 
 class State(Base):
 
-    """class state defination"""
+    """Class state defination"""
 
     __table__ = 'states'
 
@@ -20,4 +20,5 @@ class State(Base):
     name = Column(String(128), nullable=False)
     
     def __repr__(self):
+        """returns a string"
         return f"State(id={self.id}, name='{self.anme}'"
