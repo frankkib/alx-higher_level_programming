@@ -5,7 +5,7 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-
+# Create an instance of the declarative base class
 Base = declarative_base()
 
 
