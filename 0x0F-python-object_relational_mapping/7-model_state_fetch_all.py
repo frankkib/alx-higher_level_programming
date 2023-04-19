@@ -24,4 +24,3 @@ if __name__ == '__main__':
     # query the database and display the result
     for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
-
