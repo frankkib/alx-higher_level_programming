@@ -13,12 +13,12 @@ class State(Base):
 
     """Class state defination"""
 
-    __table__ = 'states'
+    __tablename__ = 'states'
 
     id = Column(
             Integer, primary_key=True, autoincrement=True, nullable=False, unique=True)
     name = Column(String(128), nullable=False)
     
     def __repr__(self):
-        """returns a string"
-        return f"State(id={self.id}, name='{self.anme}'"
+        """returns a string"""
+        return f"State(id={self.id}, name='{self.name})'"
