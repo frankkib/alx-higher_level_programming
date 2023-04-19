@@ -1,4 +1,4 @@
-#!/usr/bin/pythyon3
+#!/usr/bin/python3
 """linking a class"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
