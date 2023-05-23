@@ -3,22 +3,25 @@
 const request = require('request');
 
 const movieId = process.argv[2];
+
 if (!movieId) {
-  console.log('Please provide the movie ID');
+  console.log('Please provide the movie ID as an argument.');
   process.exit(1);
 }
-const url = 'https://swapi-api.alx-tools.com/api/films/:id';
+
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+
 request.get(url, (error, response, body) => {
   if (error) {
-    console.error('An error occurred while the request', error);
+    console.error('An error occurred while making the request:', error);
   } else {
     if (response.statusCode === 200) {
       const movieData = JSON.parse(body);
-      console.log('Title:', movieData.title);
+      console.log(movieData.title);
     } else if (response.statusCode === 404) {
-      console.log('Not found');
+      console.log('Movie not found.');
     } else {
-      console.error('Request failed', response.statusCode);
+      console.error('Request failed with status code:', response.statusCode);
     }
   }
 });
